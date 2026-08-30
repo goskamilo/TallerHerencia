@@ -1,7 +1,11 @@
-﻿namespace TallerHerencia
+﻿
+namespace Backend
 {
-    public class GeometricFigure
+    public abstract class GeometricFigure
     {
+
+
+
 
     }
 }
