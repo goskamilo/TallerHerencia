@@ -1,6 +1,6 @@
 ﻿namespace TallerHerencia
 {
-    public class Class1
+    public class GeometricFigure
     {
 
     }
