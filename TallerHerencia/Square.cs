@@ -7,18 +7,32 @@ namespace TallerHerencia
 
         //Fields
         private double _a;
-        //Constructor
-        public Square(double A)
-        {
-           _a= A;
-        }
+
+       
 
         //Propierty
         public double A
         {
-            get  => _a;
-            set => _a=ValidateA(value);
-        }    
+            get => _a;
+            set => _a = ValidateA(value);
+        }
+        //Constructor
+        public Square(string name,double a)
+        {
+            Name = name;
+            A = a;
+        }
+
+
+        // Private Method
+        private double ValidateA(double value)
+        {
+            if (value <= 0)
+            {
+                throw new Exception($"{ value }/Error: the value must be greater than zero");
+            }
+            return value;
+        }
         // Methods
         public override double GetArea()
         {
@@ -28,14 +42,6 @@ namespace TallerHerencia
         {
             return 4 * A;
         }
-        // Private Method
-        private double ValidateA(double value)
-        {
-            if (value <= 0)
-            {
-                throw new Exception("{value}/Error: the value must be greater than zero");
-            }
-            return value;
-        }
+       
     }
 }

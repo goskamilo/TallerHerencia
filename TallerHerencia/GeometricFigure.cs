@@ -7,19 +7,20 @@ namespace Backend
     {
 
         // Propierties
-       
+
         // Methods
         public string Name
         {
             get;
             set;
-        }
+
+        } = string.Empty;
         // Methods
         public abstract double GetArea();
         public abstract double GetPerimiter();
         public override string ToString()
         {
-            return $"{Name}- Area: {GetArea():D4}/Perimeter: {GetPerimiter():D4}";
+            return $"{Name,-15}     =>Area.....: {GetArea(),15:N5}     Perimeter:       {GetPerimiter(),15:N5}";
         }
 
 
