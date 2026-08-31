@@ -3,47 +3,61 @@ using TallerHerencia;
 
 namespace Backend
 {
-    public class Rhombus: Square
-    {   //Fields
-        private double _d1, _d2;   
+namespace Backend
+    {
+        public class Rhombus : Square
+        {   //Fields
+            private double _d1, _d2;
 
-        //Propiety
-        public double D1
-        {
-            get => _d1;
-            set => _d1 = ValidateD1(value);
-        }
-        public double D2
-        {
-            get => _d2;
-            set => _d2 = ValidateD2(value);
-        }
-        //Constructor
-        public Rhombus(string name, double d1, double d2)
-        {
-            D1 = d1;
-            D2 = d2;
-        }
-}
-
-        // Private Method
-        private double ValidateD1(double valueD1)
-        {
-            if (valueD1 <= 0)
+            //Property
+            public double D1
             {
-                throw new Exception($"{valueD1}/Error: the value must be greater than zero");
+                get => _d1;
+                set => _d1 = ValidateD1(value);
             }
-            return valueD1;
-        }
-        private double ValidateD2(double valueD2)
-        {
-            if (valueD2 <= 0)
+            public double D2
             {
-                throw new Exception($"{valueD2}/Error: the value must be greater than zero");
+                get => _d2;
+                set => _d2 = ValidateD2(value);
             }
-            return valueD2;
+            //Constructor
+            public Rhombus(string name, double a, double d1, double d2) : base(name, a)
+
+            {
+                D1 = d1;
+                D2 = d2;
+            }
+
+            // Private Method
+            private double ValidateD1(double value)
+            {
+                if (value <= 0)
+                {
+                    throw new Exception($"{value}/Error: the value must be greater than zero");
+                }
+                return value;
+            }
+            private double ValidateD2(double value)
+            {
+                if (value <= 0)
+                {
+                    throw new Exception($"{value}/Error: the value must be greater than zero");
+                }
+                return value;
+            }
+            // Methods
+            public override double GetArea()
+            {
+                return (D1 * D2) / 2;
+            }
+            public override double GetPerimiter()
+            {
+                return 4 * A;
+            }
+
+
         }
-
-
     }
+
+    
 }
