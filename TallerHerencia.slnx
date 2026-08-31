@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="Frontend/Frontend.csproj" Id="84e8dbf0-e9ad-421a-9d69-c374335cdab8" />
   <Project Path="TallerHerencia/Backend.csproj" />
 </Solution>

@@ -33,7 +33,7 @@ namespace TallerHerencia
         {
             if (value <= 0)
             {
-                Console.WriteLine($"{value}/Error: the value must be greater than zero");
+                throw new Exception("{value}/Error: the value must be greater than zero");
             }
             return value;
         }
