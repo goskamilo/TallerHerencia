@@ -2,8 +2,6 @@
 using TallerHerencia;
 
 namespace Backend
-{
-namespace Backend
     {
         public class Rhombus : Square
         {   //Fields
@@ -60,4 +58,3 @@ namespace Backend
     }
 
     
-}
