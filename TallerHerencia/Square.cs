@@ -6,9 +6,7 @@ namespace TallerHerencia
     {
 
         //Fields
-        private double _a;
-
-       
+        private double _a;      
 
         //Propierty
         public double A
@@ -22,7 +20,6 @@ namespace TallerHerencia
             Name = name;
             A = a;
         }
-
 
         // Private Method
         private double ValidateA(double value)

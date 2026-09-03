@@ -11,6 +11,7 @@
             get => _r;
             set => _r = ValidateR(value);
         }
+        //Contructor
         public Circle(string name, double r)
         {
             Name = name;
